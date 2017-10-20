@@ -1,2 +1,2 @@
-# entro-site
+# Entro-site
 Single page development. Technologies used - HTML5, CSS3, Bootstrap and more...
