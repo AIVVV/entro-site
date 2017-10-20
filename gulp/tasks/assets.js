@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean');
 
 var SOURCEPATHS = {
-    assets: 'src/assets/**'
+    assets: 'src/assets/**/*'
 };
 
 var APPPATH = {

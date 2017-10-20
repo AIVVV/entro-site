@@ -451,3 +451,12 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
