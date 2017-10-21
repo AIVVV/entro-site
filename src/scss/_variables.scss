@@ -5,6 +5,7 @@ $grey3: #444444;
 $grey5: #707070;
 $lighterGray: #dddddd;
 $lighterGray2: #a0a0a0;
+$lighterGray3: #f2f0f0;
 $white: #ffffff;
 $black: #000000;
 $green: #1abc9c;
@@ -38,8 +39,17 @@ $services-headline-color: $grey3;
 $services-subheadline-color: $lighterGray2;
 $services-block-subheadline-color: $grey5;
 
-
-
+/*---------- gallery variables  ------------*/
+$gallery-background-color: $lighterGray3;
+$gallery-btn-font-family: 'Lato', sans-serif;
+$gallery-box-title-font-family: 'Raleway', sans-serif;
+$gallery-box-title-color: $grey;
+$gallery-box-subtitle-font-family: 'Lato', sans-serif;
+$gallery-box-subtitle-color: $lighterGray2;
+$gallery-btn-background-color: $white;
+$gallery-btn-hover-background-color: $green;
+$gallery-btn-color: $grey;
+$gallery-btn-hover-color: $white;
 
 
 /*------------- responsive break points  -----------*/ 

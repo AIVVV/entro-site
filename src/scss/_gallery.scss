@@ -1,0 +1,82 @@
+.gallery {
+    background-color: $gallery-background-color;
+	
+	&__container_1 {
+		padding-top: 65px;
+		padding-bottom: 40px;
+	}
+
+    &__btn__group {
+
+        &__btn {
+            @include border-box;
+            float: left;
+            background-color: $gallery-btn-background-color;
+            color: $gallery-btn-color;
+            font-family: $gallery-btn-font-family;
+            font-weight: 400;
+            padding: 10px 15px;
+            &:hover {
+                background-color: $gallery-btn-hover-background-color;
+                color: $gallery-btn-hover-color;
+                border: 1px solid transparent;
+            }
+        }
+    }
+
+    &__btn {
+        @include border-box;
+        float: right;
+        background-color: $gallery-btn-background-color;
+        color: $gallery-btn-color;
+        font-family: $gallery-btn-font-family;
+        font-weight: 400;
+        padding: 10px 15px;
+        &:hover {
+            background-color: $gallery-btn-hover-background-color;
+            color: $gallery-btn-hover-color;
+            border: 1px solid transparent;
+        }
+    }
+	
+	&__container_2 {
+		padding-bottom: 60px;
+	}
+
+	&__box {
+	 	box-sizing: border-box;
+		width: 25%;
+		float: left;
+		padding: 0 10px 20px 10px;
+		
+		&__first {
+			padding-left: 0;
+		}
+
+		&__last {
+			padding-right: 0;
+		}
+
+		&__image {
+			box-sizing: border-box;
+			height: 180px;
+		}
+
+		&__title {
+			font-family: $gallery-box-title-font-family;
+			font-size: 1.1875em;
+			font-weight: 700;
+			color: $gallery-box-title-color;
+			padding-top: 10px;
+			padding-bottom: 5px;
+		}
+
+		&__subtitle {
+			font-family: $gallery-box-subtitle-font-family;
+			font-size: 0.8125em;
+			font-weight: 400;
+			color: $gallery-box-subtitle-color;
+		}
+	 }
+
+}
