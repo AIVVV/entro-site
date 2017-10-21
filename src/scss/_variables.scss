@@ -1,7 +1,10 @@
 /*------- colors --------*/ 
 $grey: #333333;
 $grey2: #3f3f3f;
+$grey3: #444444;
+$grey5: #707070;
 $lighterGray: #dddddd;
+$lighterGray2: #a0a0a0;
 $white: #ffffff;
 $black: #000000;
 $green: #1abc9c;
@@ -22,10 +25,19 @@ $welcome-font-family: 'Lato', sans-serif;
 $welcome-font-color: $white;
 
 
-/*---------- check-out variables  ------------*/
-$check-out-background-color: $purple;
-$check-out-font-family: 'Lato', sans-serif;
-$check-out-font-color: $white;
+/*---------- promo variables  ------------*/
+$promo-background-color: $purple;
+$promo-font-family: 'Lato', sans-serif;
+$promo-font-color: $white;
+
+
+/*---------- services variables  ------------*/
+$services-font-family: 'Raleway', sans-serif;
+$services-block-subheadline-font-family: 'Lato', sans-serif;
+$services-headline-color: $grey3;
+$services-subheadline-color: $lighterGray2;
+$services-block-subheadline-color: $grey5;
+
 
 
 

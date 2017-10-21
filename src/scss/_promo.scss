@@ -1,8 +1,8 @@
-.check-out {
+.promo {
     text-align: center;
-    background-color: $check-out-background-color;
-    font-family: $check-out-font-family;
-    color: $check-out-font-color;
+    background-color: $promo-background-color;
+    font-family: $promo-font-family;
+    color: $promo-font-color;
     font-size: 1.875em;
     padding: 45px 0;
 
@@ -19,7 +19,7 @@
         padding: 20px 0;
     }
     
-    & &__headline {
+    &__headline {
         font-weight: 300;
 
         strong {
