@@ -1,0 +1,74 @@
+.header {
+    background-color: $header-background;
+
+    .container {
+        height: 100%;
+    }
+
+    & &__nav {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 0;
+        border: 0px solid transparent;
+    }
+
+    & &__logo {
+        color: $header-grey;
+        font-family: $header-logo-font-family;
+        font-size: 2.625em;
+        font-weight: bold;
+        height: 100%;
+        line-height: 100px;
+        padding: 0 0 0 15px;
+		
+		@include desktop {
+			 font-size: 2.425em;
+		}
+       
+        &:hover {
+            color: $header-grey;
+        }
+    }
+
+    & &__menu {
+
+        li {
+
+            a {
+                color: $header-menu-color;
+                display: block;
+                padding: 32px 20px 0 20px;
+                height: 100px;
+                transition: 0.3s all ease-out;
+                
+                @include desktop {
+                    padding: 32px 10px 0 10px;
+                }
+
+                &:hover {
+                    color: $header-white;
+                    background-color: $header-hover-green;
+                    border-top: 4px solid $header-hover-border-green;
+                }
+
+                span {
+                    display: block;
+                    line-height: 1.0;
+
+                    &:first-child {
+                        font-family: $header-menu-font-family;
+                        font-weight: 700;
+                        font-size: 0.8125em;
+                        margin-bottom: 10px;
+                    }
+
+                    &:last-child {
+                        font-family: $header-menu-font-family;
+                        font-weight: 400;
+                        font-size: 0.6875em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// colors
+$header-grey: #333333;
+$header-white: #ffffff;
+$header-hover-green: #1abc9c;
+$header-hover-border-green: #16a085;
+$header-menu-color: #3f3f3f;
+
+//header variables 
+$header-background: $header-white;
+$header-logo-font-family: Open Sans, sans-serif;
+$header-menu-font-family: 'Raleway', sans-serif;
+
+
+// responsive break points 
+$breakpoints: (
+    phone: 480px,
+    tablet: 768px,
+    desktop: 992px
+);
