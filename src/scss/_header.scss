@@ -10,45 +10,74 @@
         height: 100px;
         margin-bottom: 0;
         border: 0px solid transparent;
+        @include tablet {
+            height: 80px;
+        }
+        @include phone {
+            height: 60px;
+        }
     }
 
     & &__logo {
-        color: $header-grey;
+        color: $header-font-color;
         font-family: $header-logo-font-family;
         font-size: 2.625em;
         font-weight: bold;
         height: 100%;
         line-height: 100px;
         padding: 0 0 0 15px;
-		
-		@include desktop {
-			 font-size: 2.425em;
-		}
-       
+        @include desktop {
+            font-size: 2.425em;
+        }
+        @include tablet {
+            font-size: 2.225em;
+            line-height: 80px;
+        }
+
+        @include phone {
+            font-size: 2.0em;
+            line-height: 60px;
+        }
         &:hover {
-            color: $header-grey;
+            color: $header-font-color;
         }
     }
 
     & &__menu {
+        @include phone {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
 
         li {
-
             a {
-                color: $header-menu-color;
+                color: $header-menu-font-color;
                 display: block;
                 padding: 32px 20px 0 20px;
                 height: 100px;
                 transition: 0.3s all ease-out;
-                
+
                 @include desktop {
-                    padding: 32px 10px 0 10px;
+                    padding: 32px 15px 0 15px;
+                }
+
+                @include tablet {
+                    height: 80px;
+                    padding: 25px 15px 0 15px;
+                }
+                @include phone {
+                    height: 50px;
+                    text-align: center;
+                    padding-top: 8px;
                 }
 
                 &:hover {
-                    color: $header-white;
-                    background-color: $header-hover-green;
-                    border-top: 4px solid $header-hover-border-green;
+                    color: $white;
+                    background-color: $header-background-hover-color;
+                    border-top: 4px solid $header-border-hover-color;
+                    @include phone {
+                        border-top: 0px;
+                    }
                 }
 
                 span {
@@ -60,15 +89,63 @@
                         font-weight: 700;
                         font-size: 0.8125em;
                         margin-bottom: 10px;
+                        position: relative;
+                        @include phone {
+                            font-size: 0.9em;
+                        }
+                        &:after {
+                            content: '';
+                            width: 1px;
+                            height: 35px;
+                            background-color: $lighterGray;
+                            position: absolute;
+                            top: 0px;
+                            right: -20px;
+                            @include desktop {
+                                right: -10px;
+                            }
+                            @include phone {
+                                background-color: transparent;
+                            }
+                        }
                     }
 
                     &:last-child {
                         font-family: $header-menu-font-family;
                         font-weight: 400;
                         font-size: 0.6875em;
+                        @include phone {
+                            font-size: 0.7em;
+                        }
                     }
                 }
             }
         }
+    }
+
+    & &__mobile_btn {
+        border: 0px;
+        padding: 12px 10px;
+        margin-top: 11px;
+        margin-right: 15px;
+        background: transparent;
+        transition: 0.3s all ease-out;
+        &:focus {
+            background-color: transparent;
+        }
+        &:hover {
+            @include border-radius(2px);
+            background: $green;
+            span {
+                background-color: $white !important;
+            }
+        }
+        span {
+            background-color: $black !important;
+        }
+    }
+
+    & &__mobile_container {
+        background: rgba(255, 255, 255, 0.7);
     }
 }

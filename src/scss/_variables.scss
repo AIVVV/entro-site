@@ -1,19 +1,39 @@
-// colors
-$header-grey: #333333;
-$header-white: #ffffff;
-$header-hover-green: #1abc9c;
-$header-hover-border-green: #16a085;
-$header-menu-color: #3f3f3f;
+/*------- colors --------*/ 
+$grey: #333333;
+$grey2: #3f3f3f;
+$lighterGray: #dddddd;
+$white: #ffffff;
+$black: #000000;
+$green: #1abc9c;
+$green2: #16a085;
+$purple: #5d4157;
 
-//header variables 
-$header-background: $header-white;
+/*--------- header variables ------------*/
+$header-font-color: $grey;
+$header-background: $white;
+$header-menu-font-color: $grey;
+$header-background-hover-color: $green;
+$header-border-hover-color: $green2;
 $header-logo-font-family: Open Sans, sans-serif;
 $header-menu-font-family: 'Raleway', sans-serif;
 
+/*----------- welcome variables -----------*/
+$welcome-font-family: 'Lato', sans-serif;
+$welcome-font-color: $white;
 
-// responsive break points 
+
+/*---------- check-out variables  ------------*/
+$check-out-background-color: $purple;
+$check-out-font-family: 'Lato', sans-serif;
+$check-out-font-color: $white;
+
+
+
+
+/*------------- responsive break points  -----------*/ 
 $breakpoints: (
-    phone: 480px,
-    tablet: 768px,
-    desktop: 992px
+	smallPhones: 560px,
+    phone: 768px,
+    tablet: 992px,
+    desktop: 1200px
 );
