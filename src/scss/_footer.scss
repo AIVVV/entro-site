@@ -1,0 +1,61 @@
+.footer {
+    background-color: $footer-copyrights-background-color;
+    color: $footer-copyrights-color;
+    font-family: $footer-copyrights-font-family;
+    font-weight: 400;
+    font-size: 0.875em;
+    @include tablet {
+    	font-size: 0.77em;
+    }
+
+    &__copyrights__container {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        @include tablet {
+        	padding-top: 30px;
+        	padding-bottom: 30px;
+        }
+        &__terms {
+            display: block;
+            line-height: 2.0;
+            @include tablet {
+            	  line-height: 1.8;
+            }
+
+        }
+        &__social__list {
+            @include clearfix;
+            float: right;
+            li {
+                float: left;
+                margin-left: 15px;
+                @include tablet {
+                	margin-left: 10px;
+                }
+                a {
+                    color: $footer-copyrights-color;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        &__contacts {
+            float: right;
+            span {
+                padding-right: 5px; 
+                @include tablet {
+                	padding-right: 3px;
+                }
+            }
+        }
+    }
+}

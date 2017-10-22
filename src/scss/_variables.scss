@@ -2,7 +2,9 @@
 $grey: #333333;
 $grey2: #3f3f3f;
 $grey3: #444444;
+$grey4: #262626;
 $grey5: #707070;
+$grey6: #666666;
 $lighterGray: #dddddd;
 $lighterGray2: #a0a0a0;
 $lighterGray3: #f2f0f0;
@@ -50,6 +52,11 @@ $gallery-btn-background-color: $white;
 $gallery-btn-hover-background-color: $green;
 $gallery-btn-color: $grey;
 $gallery-btn-hover-color: $white;
+
+/*---------- copyrights variables  ------------*/
+$footer-copyrights-background-color: $grey4;
+$footer-copyrights-color: $grey6;
+$footer-copyrights-font-family: 'Lato', sans-serif;
 
 
 /*------------- responsive break points  -----------*/ 
