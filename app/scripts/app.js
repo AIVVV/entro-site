@@ -12645,10 +12645,6 @@ global.jQuery = require('jquery');
 var $ = jQuery;
 var bootstrap = require('bootstrap');
 
-$(document).ready(function(){
-	console.log('jquery loaded');
-	console.log('bootstrap loaded');
-});
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"bootstrap":1,"jquery":14}]},{},[15])
