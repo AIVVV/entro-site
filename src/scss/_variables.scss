@@ -5,13 +5,16 @@ $grey3: #444444;
 $grey4: #262626;
 $grey5: #707070;
 $grey6: #666666;
+$grey7: #1a1a1a;
 $lighterGray: #dddddd;
 $lighterGray2: #a0a0a0;
 $lighterGray3: #f2f0f0;
+$lighterGray4: #c2c2c2;
 $white: #ffffff;
 $black: #000000;
 $green: #1abc9c;
 $green2: #16a085;
+$green3: #5cb85c;
 $purple: #5d4157;
 
 /*--------- header variables ------------*/
@@ -53,10 +56,24 @@ $gallery-btn-hover-background-color: $green;
 $gallery-btn-color: $grey;
 $gallery-btn-hover-color: $white;
 
+/*---------- footer variables  ------------*/
+$footer-font-family: 'Raleway', sans-serif;
+$footer-background-color: $grey;
+$footer-color: $white;
+
+$footer-block-one-font-family: 'Lato', sans-serif;
+$footer-block-one-logo-font-family: Open Sans, sans-serif;
+
+$footer-block-two-font-family: 'Lato', sans-serif;
+
+$footer-block-three-font-family: 'Raleway', sans-serif;
+
+$footer-block-four-font-family: 'Raleway', sans-serif;
+
 /*---------- copyrights variables  ------------*/
-$footer-copyrights-background-color: $grey4;
-$footer-copyrights-color: $grey6;
-$footer-copyrights-font-family: 'Lato', sans-serif;
+$copyrights-background-color: $grey4;
+$copyrights-color: $grey6;
+$copyrights-font-family: 'Lato', sans-serif;
 
 
 /*------------- responsive break points  -----------*/ 
