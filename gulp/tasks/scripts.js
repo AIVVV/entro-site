@@ -18,6 +18,5 @@ gulp.task('clean-scripts', function() {
 
 gulp.task('scripts', ['clean-scripts'], function() {
     return gulp.src(SOURCEPATHS.jsSource)
-        .pipe(browserify())
         .pipe(gulp.dest(APPPATH.js));
 });

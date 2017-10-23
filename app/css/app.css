@@ -3536,31 +3536,29 @@ p {
 .header {
   background-color: #ffffff;
   position: fixed;
+  z-index: 10;
   width: 100%;
   height: 100px;
   transition: 0.3s all ease-in-out;
 }
 
-.header .container {
-  height: 100%;
-}
-
-.header__nav {
-  width: 100%;
-  margin-bottom: 0;
-  border: 0px solid transparent;
-}
-
 @media only screen and (max-width: 992px) {
-  .header__nav {
+  .header {
     height: 80px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .header__nav {
+  .header {
     height: 60px;
   }
+}
+
+.header__nav {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  border: 0px solid transparent;
 }
 
 .header .header__logo {
@@ -3571,6 +3569,7 @@ p {
   height: 100%;
   line-height: 100px;
   padding: 0 0 0 15px;
+  transition: 0.3s all ease-out;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -3597,6 +3596,20 @@ p {
   color: #333333;
 }
 
+.header .header__menu {
+  *zoom: 1;
+  height: 100%;
+}
+
+.header .header__menu:before, .header .header__menu:after {
+  content: ' ';
+  display: table;
+}
+
+.header .header__menu:after {
+  clear: both;
+}
+
 @media only screen and (max-width: 768px) {
   .header .header__menu {
     margin-top: 0;
@@ -3607,8 +3620,8 @@ p {
 .header .header__menu li a {
   color: #333333;
   display: block;
-  padding: 32px 20px 0 20px;
   height: 100px;
+  padding: 32px 20px 0 20px;
   transition: 0.3s all ease-out;
 }
 
@@ -3676,7 +3689,7 @@ p {
 
 @media only screen and (max-width: 1200px) {
   .header .header__menu li a span:first-child:after {
-    right: -10px;
+    right: -16px;
   }
 }
 
@@ -3724,8 +3737,17 @@ p {
   background-color: #000000 !important;
 }
 
-.header .header__mobile_container {
-  background: rgba(255, 255, 255, 0.7);
+@media only screen and (max-width: 992px) {
+  .header__mobile_container {
+    background: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+  }
+}
+
+.active {
+  color: #ffffff !important;
+  background-color: #1abc9c !important;
+  border-top: 4px solid #16a085 !important;
 }
 
 .welcome {
