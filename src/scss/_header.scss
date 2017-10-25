@@ -19,6 +19,14 @@
         border: 0px solid transparent;
     }
 
+    .container {
+        height: 100%;
+    }
+
+    .navbar-header {
+        height: 100%;
+    }
+
     & &__logo {
         color: $header-font-color;
         font-family: $header-logo-font-family;
@@ -35,7 +43,6 @@
             font-size: 2.225em;
             line-height: 80px;
         }
-
         @include phone {
             font-size: 2.0em;
             line-height: 60px;
@@ -45,7 +52,7 @@
         }
     }
 
-    & &__menu {
+    &__menu {
         @include clearfix;
         height: 100%;
         @include phone {
@@ -53,9 +60,10 @@
             margin-bottom: 0;
         }
 
-        li {
+        &__li {
+            height: 100%;
 
-            a {
+            & &__a {
                 color: $header-menu-font-color;
                 display: block;
                 height: 100px;
@@ -77,9 +85,9 @@
                 }
 
                 &:hover {
-                    color: $white;
-                    background-color: $header-background-hover-color;
-                    border-top: 4px solid $header-border-hover-color;
+                    color: $white !important;
+                    background-color: $header-background-hover-color !important;
+                    border-top: 4px solid $header-border-hover-color !important;
                     @include phone {
                         border-top: 0px;
                     }
@@ -88,46 +96,59 @@
                 span {
                     display: block;
                     line-height: 1.0;
+                }
 
-                    &:first-child {
-                        font-family: $header-menu-font-family;
-                        font-weight: 700;
-                        font-size: 0.8125em;
-                        margin-bottom: 10px;
-                        position: relative;
-                        @include phone {
-                            font-size: 0.9em;
+                &__title {
+                    font-family: $header-menu-font-family;
+                    font-weight: 700;
+                    font-size: 0.8125em;
+                    margin-bottom: 10px;
+                    position: relative;
+                    @include phone {
+                        font-size: 0.9em;
+                    }
+                }
+
+                &__subtitle {
+                    position: relative;
+                    font-family: $header-menu-font-family;
+                    font-weight: 400;
+                    font-size: 0.6875em;
+                    @include phone {
+                        font-size: 0.7em;
+                    }
+                    &:after {
+                        content: '';
+                        width: 1px;
+                        height: 35px;
+                        background-color: $lighterGray;
+                        position: absolute;
+                        top: -22px;
+                        right: -21px;
+                        @include desktop {
+                            right: -16px;
                         }
-
-                        &:after {
-                            content: '';
-                            width: 1px;
-                            height: 35px;
-                            background-color: $lighterGray;
-                            position: absolute;
-                            top: 0px;
-                            right: -20px;
-                            @include desktop {
-                                right: -16px;
-                            }
-                            @include phone {
-                                background-color: transparent;
-                            }
+                        @include phone {
+                            background-color: transparent;
                         }
                     }
+                }
+            }
+        }
 
+        li:last-child {
+            a {
+                span {
                     &:last-child {
-                        font-family: $header-menu-font-family;
-                        font-weight: 400;
-                        font-size: 0.6875em;
-                        @include phone {
-                            font-size: 0.7em;
+                        &:after {
+                            background-color: transparent;
                         }
                     }
                 }
             }
         }
     }
+
 
     & &__mobile_btn {
         border: 0px;

@@ -1,8 +1,9 @@
 .welcome {
     font-family: $welcome-font-family;
     color: $welcome-font-color;
-    @include bg-mixin('../assets/image02.jpg', 50% 50%);
+    @include bg-mixin('../assets/image02.jpg', 50% 35%);
     text-align: center;
+    padding-top: 100px;
 
 
     &__headline {

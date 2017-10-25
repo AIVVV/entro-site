@@ -3835,6 +3835,14 @@ p {
   border: 0px solid transparent;
 }
 
+.header .container {
+  height: 100%;
+}
+
+.header .navbar-header {
+  height: 100%;
+}
+
 .header .header__logo {
   color: #333333;
   font-family: Open Sans, sans-serif;
@@ -3870,28 +3878,32 @@ p {
   color: #333333;
 }
 
-.header .header__menu {
+.header__menu {
   *zoom: 1;
   height: 100%;
 }
 
-.header .header__menu:before, .header .header__menu:after {
+.header__menu:before, .header__menu:after {
   content: ' ';
   display: table;
 }
 
-.header .header__menu:after {
+.header__menu:after {
   clear: both;
 }
 
 @media only screen and (max-width: 768px) {
-  .header .header__menu {
+  .header__menu {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 
-.header .header__menu li a {
+.header__menu__li {
+  height: 100%;
+}
+
+.header__menu__li .header__menu__li__a {
   color: #333333;
   display: block;
   height: 100px;
@@ -3900,44 +3912,44 @@ p {
 }
 
 @media only screen and (max-width: 1200px) {
-  .header .header__menu li a {
+  .header__menu__li .header__menu__li__a {
     padding: 32px 15px 0 15px;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  .header .header__menu li a {
+  .header__menu__li .header__menu__li__a {
     height: 80px;
     padding: 25px 15px 0 15px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .header .header__menu li a {
+  .header__menu__li .header__menu__li__a {
     height: 50px;
     text-align: center;
     padding-top: 8px;
   }
 }
 
-.header .header__menu li a:hover {
-  color: #ffffff;
-  background-color: #1abc9c;
-  border-top: 4px solid #16a085;
+.header__menu__li .header__menu__li__a:hover {
+  color: #ffffff !important;
+  background-color: #1abc9c !important;
+  border-top: 4px solid #16a085 !important;
 }
 
 @media only screen and (max-width: 768px) {
-  .header .header__menu li a:hover {
+  .header__menu__li .header__menu__li__a:hover {
     border-top: 0px;
   }
 }
 
-.header .header__menu li a span {
+.header__menu__li .header__menu__li__a span {
   display: block;
   line-height: 1.0;
 }
 
-.header .header__menu li a span:first-child {
+.header__menu__li .header__menu__li__a__title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 0.8125em;
@@ -3946,43 +3958,48 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-  .header .header__menu li a span:first-child {
+  .header__menu__li .header__menu__li__a__title {
     font-size: 0.9em;
   }
 }
 
-.header .header__menu li a span:first-child:after {
-  content: '';
-  width: 1px;
-  height: 35px;
-  background-color: #dddddd;
-  position: absolute;
-  top: 0px;
-  right: -20px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .header .header__menu li a span:first-child:after {
-    right: -16px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header .header__menu li a span:first-child:after {
-    background-color: transparent;
-  }
-}
-
-.header .header__menu li a span:last-child {
+.header__menu__li .header__menu__li__a__subtitle {
+  position: relative;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 0.6875em;
 }
 
 @media only screen and (max-width: 768px) {
-  .header .header__menu li a span:last-child {
+  .header__menu__li .header__menu__li__a__subtitle {
     font-size: 0.7em;
   }
+}
+
+.header__menu__li .header__menu__li__a__subtitle:after {
+  content: '';
+  width: 1px;
+  height: 35px;
+  background-color: #dddddd;
+  position: absolute;
+  top: -22px;
+  right: -21px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__menu__li .header__menu__li__a__subtitle:after {
+    right: -16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__menu__li .header__menu__li__a__subtitle:after {
+    background-color: transparent;
+  }
+}
+
+.header__menu li:last-child a span:last-child:after {
+  background-color: transparent;
 }
 
 .header .header__mobile_btn {
@@ -4029,9 +4046,10 @@ p {
   color: #ffffff;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("../assets/image02.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 35%;
   background-size: cover;
   text-align: center;
+  padding-top: 100px;
 }
 
 .welcome__headline {
