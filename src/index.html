@@ -120,76 +120,76 @@
             </div>
         </div>
     </section>
-    <!-- gallery -->
+    <!-- gallery start -->
     <section class="gallery">
         <div class="container gallery__container_1">
-            <div class="btn-group gallery__btn__group" role="group">
-                <button type="button" class="btn btn-default gallery__btn__group__btn">Show all</button>
-                <button type="button" class="btn btn-default gallery__btn__group__btn">First</button>
-                <button type="button" class="btn btn-default gallery__btn__group__btn">Second</button>
-                <button type="button" class="btn btn-default gallery__btn__group__btn">Third</button>
+            <div class="btn-group gallery__btn__group">
+                <button class="btn btn-default gallery__btn__group__btn active_btn" data-filter=".group-all">Show all</button>
+                <button class="btn btn-default gallery__btn__group__btn" data-filter=".group-1">First</button>
+                <button class="btn btn-default gallery__btn__group__btn" data-filter=".group-2">Second</button>
+                <button class="btn btn-default gallery__btn__group__btn" data-filter=".group-3">Third</button>
             </div>
-            <button type="button" class="btn btn-default gallery__btn">
+            <button class="btn btn-default gallery__btn">
                 <span class="glyphicon glyphicon-random"></span>
             </button>
         </div>
-        <div id="galley" class="container gallery__container_2">
-            <div class="gallery__box gallery__box__first">
+        <div class="container gallery__container_2">
+            <div class="gallery__box group-all group-1">
                 <img class="gallery__box__image" src="assets/image01.jpg">
                 <h1 class="gallery__box__title">Lorem Ipsum 1</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-2">
                 <img class="gallery__box__image" src="assets/image02.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 2</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-3">
                 <img class="gallery__box__image" src="assets/image03.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 3</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box gallery__box__last">
+            <div class="gallery__box group-all group-1">
                 <img class="gallery__box__image" src="assets/image04.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 4</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box gallery__box__first">
+            <div class="gallery__box group-all group-2">
                 <img class="gallery__box__image" src="assets/image05.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 5</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-3">
                 <img class="gallery__box__image" src="assets/image06.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 6</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-1">
                 <img class="gallery__box__image" src="assets/image02.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 7</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box gallery__box__last">
+            <div class="gallery__box group-all group-2">
                 <img class="gallery__box__image" src="assets/image07.jpg" alt="">
                 <h1 class="gallery__box__title">Lorem Ipsum 8</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box gallery__box__first">
+            <div class="gallery__box group-all group-3">
                 <img class="gallery__box__image" src="assets/image04.jpg" alt="">
                 <h1 class="gallery__box__title">Open Imagination</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-1">
                 <img class="gallery__box__image" src="assets/image03.jpg" alt="">
                 <h1 class="gallery__box__title">Open Imagination</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box">
+            <div class="gallery__box group-all group-2">
                 <img class="gallery__box__image" src="assets/image07.jpg" alt="">
                 <h1 class="gallery__box__title">Open Imagination</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
             </div>
-            <div class="gallery__box gallery__box__last">
+            <div class="gallery__box group-all group-3">
                 <img class="gallery__box__image" src="assets/image02.jpg" alt="">
                 <h1 class="gallery__box__title">Open Imagination</h1>
                 <span class="gallery__box__subtitle">Media, Icons</span>
@@ -369,5 +369,7 @@
 <script type="text/javascript" src="scripts/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/slick.min.js"></script>
+<script type="text/javascript" src="scripts/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="scripts/sticky-nav.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
 </html>

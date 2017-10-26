@@ -6,107 +6,65 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
-    // sticky header functionality
-    function nav() {
-        var statement;
-        if ($(window).width() > 767) {
-            statement = setInterval(function() {
-                $(window).scroll(function() {
-                    if ($(this).scrollTop() > 1) {
-                        $('.header').css({
-                            'height': '80px',
-                            'border-bottom': '1px solid #dbdbdb'
-                        });
-                        $('.header .header__logo').css({
-                            'line-height': '80px'
-                        });
-                        $('.header__menu li a').css({
-                            'height': '80px',
-                            'padding-top': '24px'
-                        });
-                        $('.header__mobile_btn').css({
-                            'margin-top': '22px'
-                        });
-                    } else {
-                        $('.header').css({
-                            'height': '100px',
-                            'border-bottom': '0'
-                        });
-                        $('.header .header__logo').css({
-                            'line-height': '100px'
-                        });
-                        $('.header__menu li a').css({
-                            'height': '100px',
-                            'padding-top': '32px'
-                        });
-                        $('.header__mobile_btn').css({
-                            'margin-top': '32px'
-                        });
-                    }
-                });
-            }, 1);
-        } else {
-            console.log('pod 768');
-            clearInterval(statement);
-            $('.header').css({
-                'height': '60px',
-                'border-bottom': '1px solid #dbdbdb'
-            });
-            $('.header .header__logo').css({
-                'line-height': '60px'
-            });
-            $('.header__menu li a').css({
-                'height': '80px',
-                'padding-top': '24px'
-            });
-            $('.header__mobile_btn').css({
-                'margin-top': '12px'
-            });
-        }
-    }
-    nav();
+    //set active class to gallery buttons
+    $('.btn-group').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
+            $buttonGroup.find('.active_btn').removeClass('active_btn');
+            $(this).addClass('active_btn');
+        });
+    });
 
-    $(window).resize(function() {
-        nav();
+    // init isotope
+    var $gallery = $('.gallery__container_2').isotope({
+        itemSelector: '.gallery__box',
+        percentPosition: true,
+        masonry: {
+            columnWidth: '.gallery__box'
+        }
+
+    });
+
+    $('.gallery__btn__group').on('click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $gallery.isotope({ filter: filterValue });
     });
 
     // slick slider 
-    $(document).ready(function() {
-        $('.slider__container').slick({
-            dots: false,
-            infinite: true,
-            autoplay: true,
-            speed: 300,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        dots: false,
-                        arrows: false
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: false,
-                        arrows: false
-                    }
+    $('.slider__container').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
                 }
-            ]
-        });
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
+                }
+            }
+        ]
     });
 });
