@@ -6,7 +6,8 @@ var SOURCEPATHS = {
     htmlSource: 'src/*.html',
     cssSource: 'src/scss/**/*.scss',
     assetsSource: 'src/assets/**',
-    jsSource: 'src/scripts/**'
+    jsSource: 'src/scripts/**',
+    fonts: 'src/fonts**'
 };
 
 var APPPATH = {
@@ -27,9 +28,10 @@ gulp.task('scriptRefresh', ['scripts'], function() {
     browserSync.reload();
 });
 
-gulp.task('watch', ['server', 'html', 'styles', 'scriptRefresh', 'assets'], function() {
+gulp.task('watch', ['server', 'html', 'styles', 'scriptRefresh', 'assets', 'fonts'], function() {
     gulp.watch([SOURCEPATHS.htmlSource], ['html']);
     gulp.watch([SOURCEPATHS.cssSource], ['styles']);
     gulp.watch([SOURCEPATHS.jsSource], ['scriptRefresh']);
     gulp.watch([SOURCEPATHS.assetsSource], ['assets']);
+     gulp.watch([SOURCEPATHS.fonts], ['fonts']);
 });
