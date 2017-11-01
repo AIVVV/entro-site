@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-    browserify = require('gulp-browserify'),
-	clean = require('gulp-clean');
+    webpack = require('webpack'),
+    clean = require('gulp-clean');
 
 var SOURCEPATHS = {
     jsSource: 'src/scripts/*.js'
@@ -16,7 +16,12 @@ gulp.task('clean-scripts', function() {
         .pipe(clean());
 });
 
-gulp.task('scripts', ['clean-scripts'], function() {
-    return gulp.src(SOURCEPATHS.jsSource)
-        .pipe(gulp.dest(APPPATH.js));
+gulp.task('scripts', ['clean-scripts'], function(callback) {
+    webpack(require('../../webpack.config.js'), function(err, stats) {
+        if (err) {
+            console.log(err, toString());
+        }
+        console.log(stats.toString());
+        callback();
+    });
 });

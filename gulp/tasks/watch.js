@@ -33,5 +33,5 @@ gulp.task('watch', ['server', 'html', 'styles', 'scriptRefresh', 'assets', 'font
     gulp.watch([SOURCEPATHS.cssSource], ['styles']);
     gulp.watch([SOURCEPATHS.jsSource], ['scriptRefresh']);
     gulp.watch([SOURCEPATHS.assetsSource], ['assets']);
-     gulp.watch([SOURCEPATHS.fonts], ['fonts']);
+    gulp.watch([SOURCEPATHS.fonts], ['fonts']);
 });
