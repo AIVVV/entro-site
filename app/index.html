@@ -73,15 +73,15 @@
         </nav>
     </header>
     <!-- welcome start -->
-    <section class="welcome">
-        <div class="container">
-            <h1 class="welcome__headline">WELLCOME TO ENTRO</h1>
-            <p class="welcome__subheadline">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <section class="wellcome">
+        <div class="container wellcome__container">
+            <h1 class="wellcome__headline">WELLCOME TO ENTRO</h1>
+            <p class="wellcome__subheadline">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
     </section>
     <!-- promo start -->
     <section class="promo">
-        <div class="container">
+        <div class="container promo__container">
             <span class="promo__headline">Lorem Ipsum is simply dummy text of the printing. <strong>Check Out</strong></span>
         </div>
     </section>
@@ -129,70 +129,74 @@
                 <button class="btn btn-default gallery__btn__group__btn" data-filter=".group-2">Second</button>
                 <button class="btn btn-default gallery__btn__group__btn" data-filter=".group-3">Third</button>
             </div>
-            <button class="btn btn-default gallery__btn">
-                <span class="glyphicon glyphicon-random"></span>
-            </button>
+            <div class="btn-group gallery__btn__group__right">
+                <button class="btn btn-default gallery__btn__group__btn">
+                    <span class="glyphicon glyphicon-random"></span>
+                </button>
+            </div>
         </div>
         <div class="container gallery__container_2">
-            <div class="gallery__box group-all group-1">
-                <img class="gallery__box__image" src="assets/image01.jpg">
-                <h1 class="gallery__box__title">Lorem Ipsum 1</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-2">
-                <img class="gallery__box__image" src="assets/image02.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 2</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-3">
-                <img class="gallery__box__image" src="assets/image03.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 3</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-1">
-                <img class="gallery__box__image" src="assets/image04.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 4</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-2">
-                <img class="gallery__box__image" src="assets/image05.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 5</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-3">
-                <img class="gallery__box__image" src="assets/image06.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 6</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-1">
-                <img class="gallery__box__image" src="assets/image02.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 7</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-2">
-                <img class="gallery__box__image" src="assets/image07.jpg" alt="">
-                <h1 class="gallery__box__title">Lorem Ipsum 8</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-3">
-                <img class="gallery__box__image" src="assets/image04.jpg" alt="">
-                <h1 class="gallery__box__title">Open Imagination</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-1">
-                <img class="gallery__box__image" src="assets/image03.jpg" alt="">
-                <h1 class="gallery__box__title">Open Imagination</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-2">
-                <img class="gallery__box__image" src="assets/image07.jpg" alt="">
-                <h1 class="gallery__box__title">Open Imagination</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
-            </div>
-            <div class="gallery__box group-all group-3">
-                <img class="gallery__box__image" src="assets/image02.jpg" alt="">
-                <h1 class="gallery__box__title">Open Imagination</h1>
-                <span class="gallery__box__subtitle">Media, Icons</span>
+            <div class="isotope-grid">
+                <div class="col-sm-3 gallery__box group-all group-1">
+                    <img class="gallery__box__image" src="assets/image01.jpg">
+                    <h1 class="gallery__box__title">Lorem Ipsum 1</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-2">
+                    <img class="gallery__box__image" src="assets/image02.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 2</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-3">
+                    <img class="gallery__box__image" src="assets/image03.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 3</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-1">
+                    <img class="gallery__box__image" src="assets/image04.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 4</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-2">
+                    <img class="gallery__box__image" src="assets/image05.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 5</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-3">
+                    <img class="gallery__box__image" src="assets/image06.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 6</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-1">
+                    <img class="gallery__box__image" src="assets/image02.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 7</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-2">
+                    <img class="gallery__box__image" src="assets/image07.jpg" alt="">
+                    <h1 class="gallery__box__title">Lorem Ipsum 8</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-3">
+                    <img class="gallery__box__image" src="assets/image04.jpg" alt="">
+                    <h1 class="gallery__box__title">Open Imagination</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-1">
+                    <img class="gallery__box__image" src="assets/image03.jpg" alt="">
+                    <h1 class="gallery__box__title">Open Imagination</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-2">
+                    <img class="gallery__box__image" src="assets/image07.jpg" alt="">
+                    <h1 class="gallery__box__title">Open Imagination</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
+                <div class="col-sm-3 gallery__box group-all group-3">
+                    <img class="gallery__box__image" src="assets/image02.jpg" alt="">
+                    <h1 class="gallery__box__title">Open Imagination</h1>
+                    <span class="gallery__box__subtitle">Media, Icons</span>
+                </div>
             </div>
         </div>
     </section>
@@ -366,6 +370,9 @@
         </div>
     </section>
 </body>
-<script type="text/javascript" src="scripts/Vendor.js"></script>
+<script type="text/javascript"  src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/App.js"></script>
+<script type="text/javascript" src="scripts/Vendor.js"></script>
+
 </html>

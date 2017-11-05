@@ -1,5 +1,5 @@
 import jQuery from 'jquery';
-var $ = jQuery;
+var $ =jQuery;
 import '../libs/slick.min.js';
 
 class Slider {

@@ -18,14 +18,14 @@ gulp.task('clean-styles', function() {
         .pipe(clean());
 });
 
-gulp.task('styles', ['clean-styles', 'bootstrap'], function() {
+gulp.task('styles', ['clean-styles', 'bootstrap-css'], function() {
     return gulp.src(SOURCEPATHS.sassApp)
         .pipe(autoPrefixer())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(gulp.dest(APPPATH.css));
 });
 
-gulp.task('bootstrap', function() {
+gulp.task('bootstrap-css', function() {
     return gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
         .pipe(gulp.dest(APPPATH.css));
 });

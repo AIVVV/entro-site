@@ -1,23 +1,27 @@
 import jQuery from 'jquery';
 var $ = jQuery;
 import '../libs/isotope.pkgd.min.js';
+var $grid;
 
-class PostFilter {
+class Filter {
     constructor() {
-        this.filterContainer = $('.gallery__container_2');
-        this.buttons = $('.gallery__btn__group');
-        this.filter();
-        this.buttons();
+        this.btnsGroup = $('.gallery__btn__group');
+        this.grid = $('.isotope-grid');
+        this.activeButton();
+        this.setFilter(this.grid);
+        this.setFilterConditions(this.grid);
     }
-    buttons() {
-        this.buttons.on('click', 'button', function() {
-            var filterValue = $(this).attr('data-filter');
-            this.filterContainer.isotope({ filter: filterValue });
+    activeButton() {
+        this.btnsGroup.each(function(i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function() {
+                $buttonGroup.find('.active_btn').removeClass('active_btn');
+                $(this).addClass('active_btn');
+            });
         });
     }
-
-    filter() {
-        this.filterContainer.isotope({
+    setFilter(element) {
+        $grid = element.isotope({
             itemSelector: '.gallery__box',
             percentPosition: true,
             masonry: {
@@ -25,6 +29,12 @@ class PostFilter {
             }
         });
     }
+    setFilterConditions(element) {
+        this.btnsGroup.on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $gr.isotope({ filter: filterValue });
+        });
+    }
 }
 
-export default PostFilter;
+export default Filter;

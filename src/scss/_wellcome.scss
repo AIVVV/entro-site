@@ -1,10 +1,21 @@
-.welcome {
+.wellcome {
     font-family: $welcome-font-family;
     color: $welcome-font-color;
     @include bg-mixin('../assets/image02.jpg', 50% 35%);
     text-align: center;
     padding-top: 100px;
 
+    &__container {
+        position: relative;
+        top: -100px;
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+        
+        &.animation__container {
+            opacity: 1;
+            top: 0;
+        }
+    }
 
     &__headline {
         font-size: 3.75em;

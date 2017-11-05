@@ -14,7 +14,6 @@
     }
 
     &__btn__group {
-
         &__btn {
             float: left;
             background-color: $gallery-btn-background-color;
@@ -44,33 +43,38 @@
         }
     }
 
-    &__btn {
+    &__btn__group__right {
         float: right;
-        background-color: $gallery-btn-background-color;
-        color: $gallery-btn-color;
-        font-family: $gallery-btn-font-family;
-        font-weight: 400;
-        font-size: 0.8125em;
-        padding: 10px 15px;
-        transition: 0.3s all ease-out;
-        @include tablet {
-            padding: 8px 13px;
-        }
-        @include phone {
-            padding: 6px 10px;
-        }
-        &:hover {
-            background-color: $gallery-btn-hover-background-color;
-            color: $gallery-btn-hover-color;
-            border: 1px solid transparent;
-        }
-        &:visited {
-            border-color: transparent !important;
-        }
-        &:focus {
-            outline: none !important;
+        
+        &__btn__right {
+            background-color: $gallery-btn-background-color;
+            color: $gallery-btn-color;
+            font-family: $gallery-btn-font-family;
+            font-weight: 400;
+            font-size: 0.8125em;
+            padding: 10px 15px;
+            transition: 0.3s all ease-out;
+            @include tablet {
+                padding: 8px 13px;
+            }
+            @include phone {
+                padding: 6px 10px;
+            }
+            &:hover {
+                background-color: $gallery-btn-hover-background-color;
+                color: $gallery-btn-hover-color;
+                border: 1px solid transparent;
+            }
+            &:visited {
+                border-color: transparent !important;
+            }
+            &:focus {
+                outline: none !important;
+            }
         }
     }
+
+
 
     &__container_2 {
         padding-bottom: 60px;
@@ -81,25 +85,16 @@
 
     &__box {
 
-        box-sizing: border-box;
-        width: 24%;
-        float: left;
-        padding: 0 5px 20px 5px;
-        @include phone {
-            width: 100%;
-            padding: 0 0 15px 0;
-            float: none;
-            text-align: center;
-        }
-
-        &__first {
-            padding-left: 0;
-        }
-
-        &__last {
-            padding-right: 0;
-        }
-
+        // box-sizing: border-box;
+        // width: 25%;
+        // float: left;
+        // padding: 0 5px 20px 5px;
+        // @include phone {
+        //     width: 100%;
+        //     padding: 0 0 15px 0;
+        //     float: none;
+        //     text-align: center;
+        // }
         &__image {
             box-sizing: border-box;
             height: 180px;

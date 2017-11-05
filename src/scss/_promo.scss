@@ -5,20 +5,32 @@
     color: $promo-font-color;
     font-size: 1.875em;
     padding: 45px 0;
+    overflow: hidden;
 
     @include desktop {
-    	font-size: 1.575em;
-    	padding: 35px 0;
+        font-size: 1.575em;
+        padding: 35px 0;
     }
     @include tablet {
-    	font-size: 1.375em;
-    	padding: 25px 0;
+        font-size: 1.375em;
+        padding: 25px 0;
     }
     @include phone {
         font-size: 1.0em;
         padding: 20px 0;
     }
-    
+
+    &__container {
+        position: relative;
+        right: 100%;
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+        &.animation__container {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
     &__headline {
         font-weight: 300;
 
@@ -37,14 +49,14 @@
                 position: absolute;
                 display: inline-block;
                 @include desktop {
-                	top: 8px;
-                	left: 140px;
-                	transform: scale(0.8);
+                    top: 8px;
+                    left: 140px;
+                    transform: scale(0.8);
                 }
                 @include tablet {
-					top: 6px;
-                	left: 125px;
-                	transform: scale(0.7);
+                    top: 6px;
+                    left: 125px;
+                    transform: scale(0.7);
                 }
                 @include phone {
                     top: 2px;
