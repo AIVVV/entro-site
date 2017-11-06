@@ -10330,10 +10330,6 @@ return jQuery;
 "use strict";
 
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 var _navigation = __webpack_require__(2);
 
 var _navigation2 = _interopRequireDefault(_navigation);
@@ -10352,12 +10348,9 @@ var _effects2 = _interopRequireDefault(_effects);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $ = _jquery2.default;
-
-
 var logoSlider = new _slider2.default();
 var mainNav = new _navigation2.default();
-// var postsFilter = new Filter();
+var postsFilter = new _filter2.default();
 var effects = new _effects2.default();
 
 /***/ }),
@@ -10365,7 +10358,7 @@ var effects = new _effects2.default();
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -10373,22 +10366,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = _jquery2.default;
 
 var Navigation = function () {
     function Navigation() {
         _classCallCheck(this, Navigation);
 
         this.window = $(window);
-        this.viewPortWidth = this.window.width();
+        this.document = $(document);
+        this.viewPortWidth = this.window.innerWidth();
         this.header = $('.header');
         this.headerLogo = $('.header .header__logo');
         this.headerMenu = $('.header__menu li a');
@@ -10465,7 +10451,7 @@ var Navigation = function () {
     }, {
         key: 'navCondition',
         value: function navCondition(width) {
-            if (width > 768) {
+            if (width + 17 > 768) {
                 this.desktopNav();
                 this.header.css({
                     'height': '100px',
@@ -10481,7 +10467,7 @@ var Navigation = function () {
                 this.headerMobileBtn.css({
                     'margin-top': '32px'
                 });
-            } else if (width < 768) {
+            } else if (width + 17 < 768) {
                 this.window.unbind('scroll');
                 this.mobileNav();
             }
@@ -10501,13 +10487,14 @@ var Navigation = function () {
 }();
 
 exports.default = Navigation;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -10515,17 +10502,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 __webpack_require__(4);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = _jquery2.default;
 
 var $grid;
 
@@ -10536,8 +10515,8 @@ var Filter = function () {
         this.btnsGroup = $('.gallery__btn__group');
         this.grid = $('.isotope-grid');
         this.activeButton();
-        this.setFilter(this.grid);
-        this.setFilterConditions(this.grid);
+        // this.setFilter(this.grid);
+        this.setFilterConditions(this.btnsGroup);
     }
 
     _createClass(Filter, [{
@@ -10565,9 +10544,10 @@ var Filter = function () {
     }, {
         key: 'setFilterConditions',
         value: function setFilterConditions(element) {
-            this.btnsGroup.on('click', 'button', function () {
+            var that = this;
+            element.on('click', 'button', function () {
                 var filterValue = $(this).attr('data-filter');
-                $gr.isotope({ filter: filterValue });
+                that.grid.isotope({ filter: filterValue });
             });
         }
     }]);
@@ -10576,6 +10556,7 @@ var Filter = function () {
 }();
 
 exports.default = Filter;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 4 */
@@ -11566,7 +11547,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -11574,17 +11555,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 __webpack_require__(6);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = _jquery2.default;
 
 var Slider = function () {
     function Slider() {
@@ -11637,6 +11610,7 @@ var Slider = function () {
 }();
 
 exports.default = Slider;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 6 */
@@ -12077,17 +12051,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
 
 var _noframework = __webpack_require__(8);
 
@@ -12096,8 +12066,6 @@ var _noframework2 = _interopRequireDefault(_noframework);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = _jquery2.default;
 
 var Effects = function () {
     function Effects() {
@@ -12173,6 +12141,7 @@ var Effects = function () {
 }();
 
 exports.default = Effects;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 8 */

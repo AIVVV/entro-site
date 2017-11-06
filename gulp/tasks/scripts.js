@@ -16,17 +16,7 @@ gulp.task('clean-scripts', function() {
         .pipe(clean());
 });
 
-gulp.task('bootstrap-js', function() {
-    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
-        .pipe(gulp.dest(APPPATH.js));
-});
-
-gulp.task('jquery', function() {
-    return gulp.src('node_modules/jquery/dist/jquery.min.js')
-        .pipe(gulp.dest(APPPATH.js));
-});
-
-gulp.task('scripts', ['clean-scripts', 'bootstrap-js', 'jquery'], function(callback) {
+gulp.task('scripts', ['clean-scripts'], function(callback) {
     webpack(require('../../webpack.config.js'), function(err, stats) {
         if (err) {
             console.log(err, toString());

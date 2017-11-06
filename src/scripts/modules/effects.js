@@ -1,5 +1,3 @@
-import jQuery from 'jquery';
-var $ = jQuery;
 import waypoints from '../../../node_modules/waypoints/lib/noframework.waypoints';
 
 class Effects {

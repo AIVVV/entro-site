@@ -1,10 +1,8 @@
-import jQuery from 'jquery';
-var $ = jQuery;
-
 class Navigation {
     constructor() {
         this.window = $(window);
-        this.viewPortWidth = this.window.width();
+        this.document = $(document);
+        this.viewPortWidth = this.window.innerWidth();
         this.header = $('.header');
         this.headerLogo = $('.header .header__logo');
         this.headerMenu = $('.header__menu li a');
@@ -72,7 +70,7 @@ class Navigation {
         });
     }
     navCondition(width) {
-        if (width > 768) {
+        if (width + 17 > 768) {
             this.desktopNav();
             this.header.css({
                 'height': '100px',
@@ -88,7 +86,7 @@ class Navigation {
             this.headerMobileBtn.css({
                 'margin-top': '32px'
             });
-        } else if (width < 768) {
+        } else if (width + 17 < 768) {
             this.window.unbind('scroll');
             this.mobileNav();
         }

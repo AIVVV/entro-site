@@ -1,5 +1,3 @@
-import jQuery from 'jquery';
-var $ = jQuery;
 import '../libs/isotope.pkgd.min.js';
 var $grid;
 
@@ -8,8 +6,8 @@ class Filter {
         this.btnsGroup = $('.gallery__btn__group');
         this.grid = $('.isotope-grid');
         this.activeButton();
-        this.setFilter(this.grid);
-        this.setFilterConditions(this.grid);
+        // this.setFilter(this.grid);
+        this.setFilterConditions(this.btnsGroup);
     }
     activeButton() {
         this.btnsGroup.each(function(i, buttonGroup) {
@@ -30,9 +28,10 @@ class Filter {
         });
     }
     setFilterConditions(element) {
-        this.btnsGroup.on('click', 'button', function() {
+        var that = this;
+        element.on('click', 'button', function() {
             var filterValue = $(this).attr('data-filter');
-            $gr.isotope({ filter: filterValue });
+            that.grid.isotope({ filter: filterValue });
         });
     }
 }
