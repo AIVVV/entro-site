@@ -2,6 +2,14 @@ var path = require('path');
 webpack = require('webpack');
 
 module.exports = {
+
+    resolve: {
+        alias: {
+            'masonry': 'masonry-layout',
+            'isotope': 'isotope-layout'
+        }
+    },
+
     entry: {
         App: "./src/scripts/app.js",
         Vendor: "./src/scripts/vendor.js"
@@ -22,7 +30,7 @@ module.exports = {
             exclude: /node_modules/
         }]
     },
-    
+
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",

@@ -1,12 +1,15 @@
-import '../libs/isotope.pkgd.min.js';
-var $grid;
+import jQueryBridget from  'jquery-bridget';
+import Isotope from 'isotope-layout';
+
+jQueryBridget('isotope', Isotope, $);
+var postFilter;
 
 class Filter {
     constructor() {
         this.btnsGroup = $('.gallery__btn__group');
         this.grid = $('.isotope-grid');
         this.activeButton();
-        // this.setFilter(this.grid);
+        this.setFilter(this.grid);
         this.setFilterConditions(this.btnsGroup);
     }
     activeButton() {
@@ -19,7 +22,7 @@ class Filter {
         });
     }
     setFilter(element) {
-        $grid = element.isotope({
+        element.isotope({
             itemSelector: '.gallery__box',
             percentPosition: true,
             masonry: {

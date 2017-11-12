@@ -77,6 +77,8 @@
 
 
     &__container_2 {
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 60px;
         @include phone {
             padding-bottom: 20px;
@@ -84,19 +86,9 @@
     }
 
     &__box {
-
-        // box-sizing: border-box;
-        // width: 25%;
-        // float: left;
-        // padding: 0 5px 20px 5px;
-        // @include phone {
-        //     width: 100%;
-        //     padding: 0 0 15px 0;
-        //     float: none;
-        //     text-align: center;
-        // }
         &__image {
             box-sizing: border-box;
+            width: 100%;
             height: 180px;
             @include desktop {
                 height: 150px;
